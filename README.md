@@ -32,19 +32,24 @@ The application connects to a PostgreSQL database containing Estonian tender det
 pip install -r requirements.txt
 ```
 
-2. Run the application:
+2. Set up environment variables:
+   - Copy `.env.example` to `.env`
+   - Update the `DB_URL` variable with your database connection string
+   - For Streamlit Cloud deployment, add `DB_URL` as a secret in your app settings
+
+3. Run the application:
 ```bash
 streamlit run Home.py
 ```
 
-3. Open your browser to `http://localhost:8501`
+4. Open your browser to `http://localhost:8501`
 
 ## Database Connection
 
-The application connects to the Estonian procurement database:
-- Host: `dpg-d30k5s8gjchc73eupg30-a.frankfurt-postgres.render.com`
-- Database: `tendlydev`
+The application uses SQLAlchemy to connect to the PostgreSQL database via the `DB_URL` environment variable:
+- Format: `postgresql://username:password@host:port/database`
 - Table: `estonian_tender_details`
+- Uses connection pooling and caching for optimal performance
 
 ## Cost Bucketing Strategy
 

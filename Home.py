@@ -2,10 +2,15 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import psycopg2
 import numpy as np
 from datetime import datetime
 import json
+import os
+from dotenv import load_dotenv
+from sqlalchemy import create_engine
+
+# Load environment variables
+load_dotenv()
 
 # Page configuration
 st.set_page_config(
@@ -19,18 +24,16 @@ st.set_page_config(
 @st.cache_resource
 def init_connection():
     """Initialize database connection with caching."""
-    return psycopg2.connect(
-        host="dpg-d30k5s8gjchc73eupg30-a.frankfurt-postgres.render.com",
-        database="tendlydev",
-        user="tendlydev_user",
-        password="ugXs4YbGLX7iTdQkAV5LpHtEnPephO9U",
-        port="5432"
-    )
+    db_url = os.getenv('DB_URL')
+    if not db_url:
+        st.error("DB_URL environment variable not found. Please set it in your environment or .env file.")
+        st.stop()
+    return create_engine(db_url)
 
 @st.cache_data(ttl=600)  # Cache for 10 minutes
 def load_tender_data():
     """Load Estonian tender details data from database."""
-    conn = init_connection()
+    engine = init_connection()
     
     query = """
     SELECT 
@@ -61,8 +64,7 @@ def load_tender_data():
     ORDER BY estimated_cost DESC
     """
     
-    df = pd.read_sql_query(query, conn)
-    conn.close()
+    df = pd.read_sql_query(query, engine)
     
     # Convert date columns
     date_columns = ['submission_deadline', 'publication_date', 'created_at']

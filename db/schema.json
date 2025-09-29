@@ -1,0 +1,3668 @@
+{
+  "tables": {
+    "billing_history": {
+      "columns": [
+        {
+          "name": "id",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "user_email",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "subscription_id",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "amount",
+          "data_type": "double precision",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": 53,
+          "scale": null
+        },
+        {
+          "name": "currency",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "status",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "billing_date",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "paid_date",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "invoice_url",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 0,
+      "sample_data": []
+    },
+    "companies": {
+      "columns": [
+        {
+          "name": "registry_code",
+          "data_type": "bigint",
+          "is_nullable": false,
+          "default": "nextval('companies_registry_code_seq'::regclass)",
+          "max_length": null,
+          "precision": 64,
+          "scale": 0
+        },
+        {
+          "name": "name",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "legal_form",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "vat_number",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "status",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "status_text",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_active",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "registration_date",
+          "data_type": "date",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "deletion_date",
+          "data_type": "date",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "address",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "city",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "county",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "postal_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "country",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "capital_amount",
+          "data_type": "double precision",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 53,
+          "scale": null
+        },
+        {
+          "name": "capital_currency",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "employee_count",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "email",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "phone",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "website",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 358623,
+      "sample_data": [
+        {
+          "registry_code": "80601854",
+          "name": "Üliõpilaskorporatsioon Sororitas Estoniae vilistlaskogu",
+          "legal_form": "MTÜ",
+          "vat_number": null,
+          "status": "R",
+          "status_text": "Registrisse kantud",
+          "is_active": "True",
+          "registration_date": "2021-10-04",
+          "deletion_date": null,
+          "address": "Saekoja tn 14a",
+          "city": "Tartu linn",
+          "county": "Tartu",
+          "postal_code": "50106",
+          "country": "Estonia",
+          "capital_amount": null,
+          "capital_currency": "EUR",
+          "employee_count": "0",
+          "email": "vilistlaskoguesinaine@sororitasestoniae.ee",
+          "phone": null,
+          "website": null,
+          "created_at": "2025-09-11 09:06:00.986362",
+          "updated_at": "2025-09-11 09:06:00.986375"
+        },
+        {
+          "registry_code": "80118543",
+          "name": "Üliõpilaskorporatsioon TEHNOLA Vilistlaskogu",
+          "legal_form": "MTÜ",
+          "vat_number": null,
+          "status": "R",
+          "status_text": "Registrisse kantud",
+          "is_active": "True",
+          "registration_date": "2000-01-19",
+          "deletion_date": null,
+          "address": "Uus tn 28/2",
+          "city": "Kesklinna linnaosa",
+          "county": "Harju",
+          "postal_code": "10111",
+          "country": "Estonia",
+          "capital_amount": null,
+          "capital_currency": "EUR",
+          "employee_count": "0",
+          "email": "mart.pais@eesti.ee",
+          "phone": "+372 5027742",
+          "website": null,
+          "created_at": "2025-09-11 09:06:01.018070",
+          "updated_at": "2025-09-11 09:06:01.018082"
+        },
+        {
+          "registry_code": "80087239",
+          "name": "Üliõpilasselts Liivika",
+          "legal_form": "MTÜ",
+          "vat_number": null,
+          "status": "R",
+          "status_text": "Registrisse kantud",
+          "is_active": "True",
+          "registration_date": "1999-04-15",
+          "deletion_date": null,
+          "address": "K. E. von Baeri tn 7",
+          "city": "Tartu linn",
+          "county": "Tartu",
+          "postal_code": "51005",
+          "country": "Estonia",
+          "capital_amount": null,
+          "capital_currency": "EUR",
+          "employee_count": "0",
+          "email": "liivika@liivika.ee",
+          "phone": "+372 7400944",
+          "website": "http://www.liivika.ee/",
+          "created_at": "2025-09-11 09:06:01.052724",
+          "updated_at": "2025-09-11 09:06:01.052738"
+        },
+        {
+          "registry_code": "80073059",
+          "name": "Üliõpilasselts Liivika Vilistlaskogu",
+          "legal_form": "MTÜ",
+          "vat_number": null,
+          "status": "R",
+          "status_text": "Registrisse kantud",
+          "is_active": "True",
+          "registration_date": "1999-03-04",
+          "deletion_date": null,
+          "address": "K. E. von Baeri tn 7",
+          "city": "Tartu linn",
+          "county": "Tartu",
+          "postal_code": "51005",
+          "country": "Estonia",
+          "capital_amount": null,
+          "capital_currency": "EUR",
+          "employee_count": "0",
+          "email": "taavi.hein@eesti.ee",
+          "phone": "+372 5151664",
+          "website": null,
+          "created_at": "2025-09-11 09:06:01.083984",
+          "updated_at": "2025-09-11 09:06:01.083998"
+        },
+        {
+          "registry_code": "80570088",
+          "name": "Üliõpilasselts Taurus",
+          "legal_form": "MTÜ",
+          "vat_number": null,
+          "status": "R",
+          "status_text": "Registrisse kantud",
+          "is_active": "True",
+          "registration_date": "2019-09-15",
+          "deletion_date": null,
+          "address": "F. R. Kreutzwaldi tn 62",
+          "city": "Tartu linn",
+          "county": "Tartu",
+          "postal_code": "51006",
+          "country": "Estonia",
+          "capital_amount": null,
+          "capital_currency": "EUR",
+          "employee_count": "0",
+          "email": "tauruslased@gmail.com",
+          "phone": null,
+          "website": null,
+          "created_at": "2025-09-11 09:06:01.117134",
+          "updated_at": "2025-09-11 09:06:01.117158"
+        }
+      ]
+    },
+    "company_activities": {
+      "columns": [
+        {
+          "name": "id",
+          "data_type": "integer",
+          "is_nullable": false,
+          "default": "nextval('company_activities_id_seq'::regclass)",
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "registry_code",
+          "data_type": "bigint",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": 64,
+          "scale": 0
+        },
+        {
+          "name": "emtak_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "activity_description",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "nace_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_primary",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "start_date",
+          "data_type": "date",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "end_date",
+          "data_type": "date",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 337157,
+      "sample_data": [
+        {
+          "id": "1112",
+          "registry_code": "16752073",
+          "emtak_code": "73111",
+          "activity_description": "Advertising agencies",
+          "nace_code": "73.11",
+          "is_primary": "True",
+          "start_date": "2025-06-12",
+          "end_date": null,
+          "created_at": "2025-09-11 07:12:12.308738"
+        },
+        {
+          "id": "1113",
+          "registry_code": "11694365",
+          "emtak_code": "47811",
+          "activity_description": "Mootorsõidukite jaesales",
+          "nace_code": "47.81",
+          "is_primary": "True",
+          "start_date": "2025-06-18",
+          "end_date": null,
+          "created_at": "2025-09-11 07:12:12.308754"
+        },
+        {
+          "id": "1114",
+          "registry_code": "11694365",
+          "emtak_code": "82991",
+          "activity_description": "Muud mujal liigitamata äriactivitiest abistavad activitiesed",
+          "nace_code": "82.99",
+          "is_primary": "False",
+          "start_date": "2025-06-18",
+          "end_date": null,
+          "created_at": "2025-09-11 07:12:12.308755"
+        },
+        {
+          "id": "1115",
+          "registry_code": "11694365",
+          "emtak_code": "47821",
+          "activity_description": "Mootorsõidukite osade ja lisaseadmete jaesales",
+          "nace_code": "47.82",
+          "is_primary": "False",
+          "start_date": "2025-06-18",
+          "end_date": null,
+          "created_at": "2025-09-11 07:12:12.308757"
+        },
+        {
+          "id": "1116",
+          "registry_code": "11694365",
+          "emtak_code": "77111",
+          "activity_description": "Sõiduautode ja väikebusside (täismassiga kuni 3,5 t) rentimine ja kasutusrent",
+          "nace_code": "77.11",
+          "is_primary": "False",
+          "start_date": "2025-06-18",
+          "end_date": null,
+          "created_at": "2025-09-11 07:12:12.308758"
+        }
+      ]
+    },
+    "contact_messages": {
+      "columns": [
+        {
+          "name": "id",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "name",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "email",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "company",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "subject",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "message",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "status",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 0,
+      "sample_data": []
+    },
+    "estonian_tender_details": {
+      "columns": [
+        {
+          "name": "procurement_id",
+          "data_type": "integer",
+          "is_nullable": false,
+          "default": "nextval('estonian_tender_details_procurement_id_seq'::regclass)",
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "additional_info",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "document_url",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_electronic_invoicing",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_electronic_payment",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_joint_procurement",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_central_purchasing",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_full_document_access",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_wto",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_divided_into_parts",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "estimated_cost",
+          "data_type": "double precision",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 53,
+          "scale": null
+        },
+        {
+          "name": "is_cost_classified",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "duration_in_months",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "contract_start_date",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_eu_financing",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_contract_renewal",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_green",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "has_social_aspects",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "has_innovative_aspects",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "short_description",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "criterion_method",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "framework_agreement_type",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "max_participants",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "is_deposit_guarantee_required",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "main_financing_condition",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "submission_deadline",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "submission_opening_date",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "tender_valid_months",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "opening_place",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_negotiation",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_digital_auction",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "performance_conditions",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_reserved_to_profession",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_staff_qualification_required",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "tender_name",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "reference_number",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "procedure_type_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "procurement_type_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "state_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_electronic_offer",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "publication_date",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "procurement_sector_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_eu_notice",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_over_sum_limit",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "nuts_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "location_additional_info",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "last_scraped",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "liable_person_id",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "liable_person_name",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": "''::character varying",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "procurement_sum_limit_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": "''::character varying",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "tender_duration_type",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": "''::character varying",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "can_change_parts",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": "false",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "show_cost",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": "true",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "primary_cpv_id",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "primary_cpv_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": "''::character varying",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "primary_cpv_name",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": "''::character varying",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "languages",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": "''::character varying",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "nuts_codes_json",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": "''::text",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "ai_requirements",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": "''::text",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 48479,
+      "sample_data": [
+        {
+          "procurement_id": "3438576",
+          "additional_info": "",
+          "document_url": "https://riigihanked.riik.ee/rhr-web/#/procurement/3438576/general-info",
+          "is_electronic_invoicing": "True",
+          "is_electronic_payment": "True",
+          "is_joint_procurement": "False",
+          "is_central_purchasing": "False",
+          "is_full_document_access": "True",
+          "is_wto": "False",
+          "is_divided_into_parts": "False",
+          "estimated_cost": "20000.0",
+          "is_cost_classified": "True",
+          "duration_in_months": null,
+          "contract_start_date": null,
+          "is_eu_financing": "False",
+          "is_contract_renewal": "False",
+          "is_green": "False",
+          "has_social_aspects": "False",
+          "has_innovative_aspects": "False",
+          "short_description": "Ühe N1 kaubiku ost",
+          "criterion_method": "relative_weighting",
+          "framework_agreement_type": "",
+          "max_participants": null,
+          "is_deposit_guarantee_required": "False",
+          "main_financing_condition": "",
+          "submission_deadline": "2025-09-01 10:00:00",
+          "submission_opening_date": "2025-09-01 11:00:00",
+          "tender_valid_months": "1",
+          "opening_place": "",
+          "is_negotiation": "False",
+          "is_digital_auction": "False",
+          "performance_conditions": "",
+          "is_reserved_to_profession": "False",
+          "is_staff_qualification_required": "False",
+          "tender_name": "Väikekaubiku ost",
+          "reference_number": "",
+          "procedure_type_code": "LM",
+          "procurement_type_code": "A",
+          "state_code": "",
+          "is_electronic_offer": "True",
+          "publication_date": null,
+          "procurement_sector_code": "K",
+          "is_eu_notice": "False",
+          "is_over_sum_limit": "False",
+          "nuts_code": "EE",
+          "location_additional_info": "Täpne piirkond määramata",
+          "created_at": "2025-09-12 11:43:57.641771",
+          "updated_at": "2025-09-12 11:43:57.641778",
+          "last_scraped": "2025-09-12 11:43:57.641779",
+          "liable_person_id": "579140",
+          "liable_person_name": "ELARI SAAR",
+          "procurement_sum_limit_code": "1",
+          "tender_duration_type": "",
+          "can_change_parts": "False",
+          "show_cost": "False",
+          "primary_cpv_id": "16233",
+          "primary_cpv_code": "34115300-9",
+          "primary_cpv_name": "Second-hand transport vehicles",
+          "languages": "ET",
+          "nuts_codes_json": "[{\"nutsCode\": \"EE\", \"nutsCodeLvl3\": [\"EE001\", \"EE008\", \"EE004\", \"EE00A\", \"EE009\"], \"additionalInformation\": \"T\\u00e4pne piirkond m\\u00e4\\u00e4ramata\"}]",
+          "ai_requirements": ""
+        },
+        {
+          "procurement_id": "4360728",
+          "additional_info": "",
+          "document_url": "https://riigihanked.riik.ee/rhr-web/#/procurement/4360728/general-info",
+          "is_electronic_invoicing": "True",
+          "is_electronic_payment": "True",
+          "is_joint_procurement": "False",
+          "is_central_purchasing": "False",
+          "is_full_document_access": "True",
+          "is_wto": "False",
+          "is_divided_into_parts": "False",
+          "estimated_cost": "88000.0",
+          "is_cost_classified": "False",
+          "duration_in_months": "12",
+          "contract_start_date": null,
+          "is_eu_financing": "False",
+          "is_contract_renewal": "False",
+          "is_green": "False",
+          "has_social_aspects": "False",
+          "has_innovative_aspects": "False",
+          "short_description": "Hanke eesmärgiks on laiendada hetkel kasutatavat funktsionaalsust COO (Certificate of Origin) lisandumisega.",
+          "criterion_method": "relative_weighting",
+          "framework_agreement_type": "",
+          "max_participants": null,
+          "is_deposit_guarantee_required": "False",
+          "main_financing_condition": "",
+          "submission_deadline": "2025-06-19 09:00:00",
+          "submission_opening_date": "2025-06-19 10:00:00",
+          "tender_valid_months": "4",
+          "opening_place": "",
+          "is_negotiation": "True",
+          "is_digital_auction": "False",
+          "performance_conditions": "",
+          "is_reserved_to_profession": "False",
+          "is_staff_qualification_required": "False",
+          "tender_name": "Eesti Tollitariifistiku ITE Suite tarkvara funktsionaalsuse laiendamine",
+          "reference_number": "",
+          "procedure_type_code": "T",
+          "procurement_type_code": "A",
+          "state_code": "",
+          "is_electronic_offer": "False",
+          "publication_date": null,
+          "procurement_sector_code": "K",
+          "is_eu_notice": "False",
+          "is_over_sum_limit": "False",
+          "nuts_code": "EE",
+          "location_additional_info": "Täpne piirkond määramata",
+          "created_at": "2025-09-12 11:43:59.371052",
+          "updated_at": "2025-09-12 11:43:59.371062",
+          "last_scraped": "2025-09-12 11:43:59.371063",
+          "liable_person_id": "444522",
+          "liable_person_name": "JAANIKA RAHU",
+          "procurement_sum_limit_code": "3",
+          "tender_duration_type": "MONTHS",
+          "can_change_parts": "False",
+          "show_cost": "True",
+          "primary_cpv_id": "14295",
+          "primary_cpv_code": "48810000-9",
+          "primary_cpv_name": "Information systems",
+          "languages": "ET",
+          "nuts_codes_json": "[{\"nutsCode\": \"EE\", \"nutsCodeLvl3\": [\"EE001\", \"EE008\", \"EE004\", \"EE00A\", \"EE009\"], \"additionalInformation\": \"T\\u00e4pne piirkond m\\u00e4\\u00e4ramata\"}]",
+          "ai_requirements": ""
+        },
+        {
+          "procurement_id": "5116221",
+          "additional_info": "Ostetakse terviklik kehakoostise mõõtmise seade, mile ostu ei ole võimalik osadeks jagada.",
+          "document_url": "https://riigihanked.riik.ee/rhr-web/#/procurement/5116221/general-info",
+          "is_electronic_invoicing": "True",
+          "is_electronic_payment": "True",
+          "is_joint_procurement": "False",
+          "is_central_purchasing": "False",
+          "is_full_document_access": "True",
+          "is_wto": "True",
+          "is_divided_into_parts": "False",
+          "estimated_cost": "100000.0",
+          "is_cost_classified": "False",
+          "duration_in_months": "48",
+          "contract_start_date": "2025-05-02 00:00:00",
+          "is_eu_financing": "False",
+          "is_contract_renewal": "False",
+          "is_green": "False",
+          "has_social_aspects": "False",
+          "has_innovative_aspects": "False",
+          "short_description": "Hanke eesmärk on sõlmida raamleping kehakoostise mõõtmise seadmete, lisaseadmete (sh tarkvaralitsentside, lisamoodulite) ja kaasnevate teenuste (sh remont, hooldus ja koolitus) ning seadme kasutamiseks vajaliku kauba soetamiseks.",
+          "criterion_method": "relative_weighting",
+          "framework_agreement_type": "WITHOUT_REOPENING_COMPETITION",
+          "max_participants": "1",
+          "is_deposit_guarantee_required": "False",
+          "main_financing_condition": "",
+          "submission_deadline": "2025-04-11 12:00:00",
+          "submission_opening_date": "2025-04-11 13:00:00",
+          "tender_valid_months": "3",
+          "opening_place": "https://riigihanked.riik.ee/rhr-web/#/",
+          "is_negotiation": "True",
+          "is_digital_auction": "False",
+          "performance_conditions": "Raamlpeingu maksimaalne maksumus on 250000 eurot.",
+          "is_reserved_to_profession": "False",
+          "is_staff_qualification_required": "False",
+          "tender_name": "Kehakoostise mõõtmise seadmed",
+          "reference_number": "",
+          "procedure_type_code": "A",
+          "procurement_type_code": "A",
+          "state_code": "",
+          "is_electronic_offer": "True",
+          "publication_date": null,
+          "procurement_sector_code": "K",
+          "is_eu_notice": "False",
+          "is_over_sum_limit": "False",
+          "nuts_code": "EE",
+          "location_additional_info": "Tallinn",
+          "created_at": "2025-09-12 11:44:00.468613",
+          "updated_at": "2025-09-12 11:44:00.468731",
+          "last_scraped": "2025-09-12 11:44:00.468751",
+          "liable_person_id": "508480",
+          "liable_person_name": "EDUARD SIZOV",
+          "procurement_sum_limit_code": "3",
+          "tender_duration_type": "MONTHS",
+          "can_change_parts": "False",
+          "show_cost": "True",
+          "primary_cpv_id": "4804",
+          "primary_cpv_code": "33124100-6",
+          "primary_cpv_name": "Diagnostic devices",
+          "languages": "ET",
+          "nuts_codes_json": "[{\"nutsCode\": \"EE\", \"nutsCodeLvl3\": [\"EE001\"], \"additionalInformation\": \"Tallinn\"}]",
+          "ai_requirements": ""
+        },
+        {
+          "procurement_id": "5773940",
+          "additional_info": "Hange ei ole jagatud osadeks. Tellitav teenus on suunatud ühe konkreetse regiooni teenindamiseks ja selle sees paiknevate jaotuspunktide hulk ja läbitav kilometraaž ei ole nii suur, et oleks majanduslikult mõistlik jaotada hange osadeks.",
+          "document_url": "https://riigihanked.riik.ee/rhr-web/#/procurement/5773940/general-info",
+          "is_electronic_invoicing": "True",
+          "is_electronic_payment": "True",
+          "is_joint_procurement": "False",
+          "is_central_purchasing": "False",
+          "is_full_document_access": "True",
+          "is_wto": "True",
+          "is_divided_into_parts": "False",
+          "estimated_cost": "300000.0",
+          "is_cost_classified": "True",
+          "duration_in_months": "24",
+          "contract_start_date": null,
+          "is_eu_financing": "False",
+          "is_contract_renewal": "True",
+          "is_green": "False",
+          "has_social_aspects": "False",
+          "has_innovative_aspects": "False",
+          "short_description": "Hanke eesmärgiks on leida transpordiettevõte, kes asuks teenindama Tallinna ja Harjumaa postkontoreid. Ettevõte peab teostama konteineritesse pakitud saadetiste transporti Omniva logistikakeskuse ja postkontorite vahel.",
+          "criterion_method": "relative_weighting",
+          "framework_agreement_type": "WITHOUT_REOPENING_COMPETITION",
+          "max_participants": null,
+          "is_deposit_guarantee_required": "False",
+          "main_financing_condition": "Info on välja toodud hankelepingu projektis",
+          "submission_deadline": "2025-06-11 12:00:00",
+          "submission_opening_date": "2025-06-11 13:00:00",
+          "tender_valid_months": "3",
+          "opening_place": "",
+          "is_negotiation": "True",
+          "is_digital_auction": "False",
+          "performance_conditions": "Info on välja toodud hankelepingu projektis",
+          "is_reserved_to_profession": "False",
+          "is_staff_qualification_required": "False",
+          "tender_name": "Tallinna ja Harjumaa postkontorite transporditeenused",
+          "reference_number": "",
+          "procedure_type_code": "LM",
+          "procurement_type_code": "T",
+          "state_code": "",
+          "is_electronic_offer": "True",
+          "publication_date": null,
+          "procurement_sector_code": "V",
+          "is_eu_notice": "False",
+          "is_over_sum_limit": "False",
+          "nuts_code": "EE",
+          "location_additional_info": "Tallinn ja Harjumaa",
+          "created_at": "2025-09-12 11:44:01.999127",
+          "updated_at": "2025-09-12 11:44:01.999138",
+          "last_scraped": "2025-09-12 11:44:01.999138",
+          "liable_person_id": "614572",
+          "liable_person_name": "MARGUS PADJUS",
+          "procurement_sum_limit_code": "2",
+          "tender_duration_type": "MONTHS",
+          "can_change_parts": "False",
+          "show_cost": "False",
+          "primary_cpv_id": "9691",
+          "primary_cpv_code": "60161000-4",
+          "primary_cpv_name": "Parcel transport services",
+          "languages": "ET",
+          "nuts_codes_json": "[{\"nutsCode\": \"EE\", \"nutsCodeLvl3\": [\"EE001\"], \"additionalInformation\": \"Tallinn ja Harjumaa\"}]",
+          "ai_requirements": ""
+        },
+        {
+          "procurement_id": "5971722",
+          "additional_info": "",
+          "document_url": "https://riigihanked.riik.ee/rhr-web/#/procurement/5971722/general-info",
+          "is_electronic_invoicing": "True",
+          "is_electronic_payment": "True",
+          "is_joint_procurement": "False",
+          "is_central_purchasing": "False",
+          "is_full_document_access": "True",
+          "is_wto": "True",
+          "is_divided_into_parts": "True",
+          "estimated_cost": "169400.0",
+          "is_cost_classified": "False",
+          "duration_in_months": null,
+          "contract_start_date": null,
+          "is_eu_financing": "False",
+          "is_contract_renewal": "False",
+          "is_green": "False",
+          "has_social_aspects": "False",
+          "has_innovative_aspects": "False",
+          "short_description": "Dialüüsil kasutatavad dialüsaatorite ja dialüüsitarvikute ostmine",
+          "criterion_method": "",
+          "framework_agreement_type": "",
+          "max_participants": null,
+          "is_deposit_guarantee_required": "False",
+          "main_financing_condition": "",
+          "submission_deadline": "2024-12-11 12:00:00",
+          "submission_opening_date": "2024-12-11 13:00:00",
+          "tender_valid_months": "3",
+          "opening_place": "https://riigihanked.riik.ee/rhr-web/#/",
+          "is_negotiation": "True",
+          "is_digital_auction": "False",
+          "performance_conditions": "",
+          "is_reserved_to_profession": "False",
+          "is_staff_qualification_required": "False",
+          "tender_name": "Dialüüsil kasutatavad dialüsaatorid ja dialüüsitarvikud 2",
+          "reference_number": "",
+          "procedure_type_code": "A",
+          "procurement_type_code": "A",
+          "state_code": "",
+          "is_electronic_offer": "True",
+          "publication_date": null,
+          "procurement_sector_code": "K",
+          "is_eu_notice": "False",
+          "is_over_sum_limit": "False",
+          "nuts_code": "",
+          "location_additional_info": "",
+          "created_at": "2025-09-12 11:44:03.333377",
+          "updated_at": "2025-09-12 11:44:03.333409",
+          "last_scraped": "2025-09-12 11:44:03.333413",
+          "liable_person_id": "437540",
+          "liable_person_name": "RITA RAIEND",
+          "procurement_sum_limit_code": "3",
+          "tender_duration_type": "",
+          "can_change_parts": "False",
+          "show_cost": "True",
+          "primary_cpv_id": "4965",
+          "primary_cpv_code": "33181500-7",
+          "primary_cpv_name": "Renal consumables",
+          "languages": "ET,EN",
+          "nuts_codes_json": "",
+          "ai_requirements": ""
+        }
+      ]
+    },
+    "estonian_tender_documents": {
+      "columns": [
+        {
+          "name": "tender_id",
+          "data_type": "integer",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "procurement_doc_old_id",
+          "data_type": "integer",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "document_name",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "file_name",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "file_size",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "document_type",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "document_subtype",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "date_created",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "description",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "temp_url_endpoint",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "api_download_url",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "web_url",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "procurement_doc_id",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "version_id",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "ai_summary",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "downloaded",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "processed_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 6007,
+      "sample_data": [
+        {
+          "tender_id": "9212684",
+          "procurement_doc_old_id": "18578368",
+          "document_name": "Kõrvaldamise alused ja kvalifitseerimistingimused",
+          "file_name": "299145_korvaldamise_alused_ja_kvalifitseerimistingimused.pdf",
+          "file_size": "5127",
+          "document_type": "Standard Document",
+          "document_subtype": "Exclusion Grounds and Qualification Conditions",
+          "date_created": null,
+          "description": "",
+          "temp_url_endpoint": "https://riigihanked.riik.ee/rhr/api/public/v1/proc-vers/9369364/documents/18578368/temp-url",
+          "api_download_url": "https://riigihanked.riik.ee/rhr/api/public/v1/proc-vers/9369364/documents/document?procurementDocOldId=18578368",
+          "web_url": "https://riigihanked.riik.ee/rhr-web/#/procurement/9212684/documents/source-document?group=B&documentOldId=18578368",
+          "procurement_doc_id": "18578321",
+          "version_id": "9369364",
+          "ai_summary": "Eesti Energia seeks a one-year travel-insurance provider for 15.10.2025-14.10.2026; bidders must (mandatory) hold an Estonian licence to underwrite the required insurance classes and must not have any outstanding significant contract breach with Eesti Energia or any statutory exclusion grounds under § 95(1) of the Public Procurement Act.",
+          "downloaded": "True",
+          "processed_at": "2025-09-28 08:50:26.261986",
+          "created_at": "2025-09-28 08:50:26.401306",
+          "updated_at": "2025-09-28 08:50:26.401317"
+        },
+        {
+          "tender_id": "9212684",
+          "procurement_doc_old_id": "18578369",
+          "document_name": "Vastavustingimused",
+          "file_name": "299145_vastavustingimused.pdf",
+          "file_size": "2747",
+          "document_type": "Standard Document",
+          "document_subtype": "Compliance Conditions",
+          "date_created": null,
+          "description": "",
+          "temp_url_endpoint": "https://riigihanked.riik.ee/rhr/api/public/v1/proc-vers/9369364/documents/18578369/temp-url",
+          "api_download_url": "https://riigihanked.riik.ee/rhr/api/public/v1/proc-vers/9369364/documents/document?procurementDocOldId=18578369",
+          "web_url": "https://riigihanked.riik.ee/rhr-web/#/procurement/9212684/documents/source-document?group=B&documentOldId=18578369",
+          "procurement_doc_id": "18578337",
+          "version_id": "9369364",
+          "ai_summary": "This compliance-check document merely confirms—via a mandatory “Yes/No” radio-button—that the bidder accepts all still-unseen Eesti Energia travel-insurance tender terms for 2025-10-15 to 2026-10-14, so only insurers already licensed in Estonia and willing to bid unconditionally should proceed to download the full dossier.",
+          "downloaded": "True",
+          "processed_at": "2025-09-28 08:50:26.293618",
+          "created_at": "2025-09-28 08:50:26.401318",
+          "updated_at": "2025-09-28 08:50:26.401319"
+        },
+        {
+          "tender_id": "9212684",
+          "procurement_doc_old_id": "18578370",
+          "document_name": "Hindamiskriteeriumid ja hinnatavad näitajad",
+          "file_name": "299145_hindamiskriteeriumid.pdf",
+          "file_size": "2861",
+          "document_type": "Standard Document",
+          "document_subtype": "Evaluation Criteria",
+          "date_created": null,
+          "description": "",
+          "temp_url_endpoint": "https://riigihanked.riik.ee/rhr/api/public/v1/proc-vers/9369364/documents/18578370/temp-url",
+          "api_download_url": "https://riigihanked.riik.ee/rhr/api/public/v1/proc-vers/9369364/documents/document?procurementDocOldId=18578370",
+          "web_url": "https://riigihanked.riik.ee/rhr-web/#/procurement/9212684/documents/source-document?group=B&documentOldId=18578370",
+          "procurement_doc_id": "18578339",
+          "version_id": "9369364",
+          "ai_summary": "Eesti Energia’s one-year group travel-insurance tender (15.10.2025-14.10.2026) is a 100 % price-only competition (lowest net-EUR offer wins) with no stated technical/qualification hurdles, so any insurer able to underwrite travel risks at the lowest cost should bid.",
+          "downloaded": "True",
+          "processed_at": "2025-09-28 08:50:26.325523",
+          "created_at": "2025-09-28 08:50:26.401321",
+          "updated_at": "2025-09-28 08:50:26.401321"
+        },
+        {
+          "tender_id": "9212684",
+          "procurement_doc_old_id": "18578371",
+          "document_name": "Lisa 1 - Kindlustustellimus 2025",
+          "file_name": "Lisa 1 - Reisikindlustuse tellimus 2025.docx",
+          "file_size": "29422",
+          "document_type": "Standard Document",
+          "document_subtype": "General Document",
+          "date_created": null,
+          "description": "",
+          "temp_url_endpoint": "https://riigihanked.riik.ee/rhr/api/public/v1/proc-vers/9369364/documents/18578371/temp-url",
+          "api_download_url": "https://riigihanked.riik.ee/rhr/api/public/v1/proc-vers/9369364/documents/document?procurementDocOldId=18578371",
+          "web_url": "https://riigihanked.riik.ee/rhr-web/#/procurement/9212684/documents/source-document?group=B&documentOldId=18578371",
+          "procurement_doc_id": "18578347",
+          "version_id": "9369364",
+          "ai_summary": "Eesti Energia otsib maaklerit/insurert, kes 15.10.2025-14.10.2026 pakkuda avatud poliisiga 2 100 töötaja ametireisikindlustust (kogu maailm, välja arvatud koduriik ja RU/BY/UA) 500 000 € meditsiiniabi, 75 000 € õnnetusjuhtumi ja muude kindlustuskaitsedega (terrorism, looduskatastroof, COVID-19, üle 70-a ja ohtliku töö tegijad kaetud), kus hinnatase on oluline, kuid piiratud paremate tingimuste pakkumine on lubatud, kui see hinda oluliselt ei kergita – pakkumise esitamiseks peab olema võime",
+          "downloaded": "True",
+          "processed_at": "2025-09-28 08:50:26.361335",
+          "created_at": "2025-09-28 08:50:26.401322",
+          "updated_at": "2025-09-28 08:50:26.401323"
+        },
+        {
+          "tender_id": "9212684",
+          "procurement_doc_old_id": "18578372",
+          "document_name": "Pakkumuse esitamise ettepanek",
+          "file_name": "RHAD Pakkumuse esitamise ettepanek.docx",
+          "file_size": "48740",
+          "document_type": "Standard Document",
+          "document_subtype": "General Document",
+          "date_created": null,
+          "description": "",
+          "temp_url_endpoint": "https://riigihanked.riik.ee/rhr/api/public/v1/proc-vers/9369364/documents/18578372/temp-url",
+          "api_download_url": "https://riigihanked.riik.ee/rhr/api/public/v1/proc-vers/9369364/documents/document?procurementDocOldId=18578372",
+          "web_url": "https://riigihanked.riik.ee/rhr-web/#/procurement/9212684/documents/source-document?group=B&documentOldId=18578372",
+          "procurement_doc_id": "18578353",
+          "version_id": "9369364",
+          "ai_summary": "Eesti Energia otsib 15.10.2025–14.10.2026 perioodiks aastast reisikindlustust; pakkumused tuleb esitada eesti keeles (võõrkeelsed koos tõlkega) ja need peavad kehtima 30 päeva, alternatiivlahendused on keelatud, osaleda võivad vaid EL/EMP/WTO riikides registreeritud kindlustusandjad (kindlustuslitsents kohustuslik).",
+          "downloaded": "True",
+          "processed_at": "2025-09-28 08:50:26.396593",
+          "created_at": "2025-09-28 08:50:26.401324",
+          "updated_at": "2025-09-28 08:50:26.401325"
+        }
+      ]
+    },
+    "estonian_tender_results": {
+      "columns": [
+        {
+          "name": "procurement_id",
+          "data_type": "integer",
+          "is_nullable": false,
+          "default": "nextval('estonian_tender_results_procurement_id_seq'::regclass)",
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "winner_name",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "winner_reg_code",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "contract_cost",
+          "data_type": "double precision",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 53,
+          "scale": null
+        },
+        {
+          "name": "contract_actual_cost",
+          "data_type": "double precision",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 53,
+          "scale": null
+        },
+        {
+          "name": "contract_status",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "offer_count",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "last_scraped",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 47758,
+      "sample_data": [
+        {
+          "procurement_id": "9308404",
+          "winner_name": "",
+          "winner_reg_code": "",
+          "contract_cost": null,
+          "contract_actual_cost": null,
+          "contract_status": "",
+          "offer_count": "0",
+          "created_at": "2025-09-23 12:14:34.782278",
+          "updated_at": "2025-09-23 12:14:34.782286",
+          "last_scraped": "2025-09-23 12:14:34.782287"
+        },
+        {
+          "procurement_id": "9306924",
+          "winner_name": "",
+          "winner_reg_code": "",
+          "contract_cost": null,
+          "contract_actual_cost": null,
+          "contract_status": "",
+          "offer_count": "2",
+          "created_at": "2025-09-23 12:14:35.499668",
+          "updated_at": "2025-09-23 12:14:35.499689",
+          "last_scraped": "2025-09-23 12:14:35.499690"
+        },
+        {
+          "procurement_id": "9301066",
+          "winner_name": "",
+          "winner_reg_code": "",
+          "contract_cost": null,
+          "contract_actual_cost": null,
+          "contract_status": "",
+          "offer_count": "1",
+          "created_at": "2025-09-23 12:14:36.243179",
+          "updated_at": "2025-09-23 12:14:36.243199",
+          "last_scraped": "2025-09-23 12:14:36.243201"
+        },
+        {
+          "procurement_id": "9307984",
+          "winner_name": "",
+          "winner_reg_code": "",
+          "contract_cost": null,
+          "contract_actual_cost": null,
+          "contract_status": "",
+          "offer_count": "0",
+          "created_at": "2025-09-23 12:14:36.948499",
+          "updated_at": "2025-09-23 12:14:36.948511",
+          "last_scraped": "2025-09-23 12:14:36.948515"
+        },
+        {
+          "procurement_id": "9280404",
+          "winner_name": "",
+          "winner_reg_code": "",
+          "contract_cost": null,
+          "contract_actual_cost": null,
+          "contract_status": "",
+          "offer_count": "0",
+          "created_at": "2025-09-23 12:14:37.662828",
+          "updated_at": "2025-09-23 12:14:37.662847",
+          "last_scraped": "2025-09-23 12:14:37.662849"
+        }
+      ]
+    },
+    "estonian_tenders": {
+      "columns": [
+        {
+          "name": "procurement_id",
+          "data_type": "integer",
+          "is_nullable": false,
+          "default": "nextval('estonian_tenders_procurement_id_seq'::regclass)",
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "procurement_reference_nr",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "procurement_name",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "contracting_authority_name",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "procurement_status",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "procurement_type",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "procurement_process_type",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "short_description",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_e_procurement",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "main_cpv_id",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "main_cpv_name",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_procurement_multi_stage",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "proc_process_reveal_date",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "proc_process_submit_date",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_green_procurement",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_suspended",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "procurement_has_parts",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "notices_count",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "contracts_count",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "disputes_count",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "procurement_start_basis",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "last_scraped",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 48479,
+      "sample_data": [
+        {
+          "procurement_id": "7278105",
+          "procurement_reference_nr": "278984",
+          "procurement_name": "Traktori (koos lisavarustusega) kasutusrent",
+          "contracting_authority_name": "Tori Vallavalitsus",
+          "procurement_status": "13",
+          "procurement_type": "A",
+          "procurement_process_type": "A",
+          "short_description": "",
+          "is_e_procurement": "True",
+          "main_cpv_id": "11159",
+          "main_cpv_name": "Traktorid",
+          "is_procurement_multi_stage": "False",
+          "proc_process_reveal_date": "2024-05-06 10:00:31.031000",
+          "proc_process_submit_date": "2024-05-27 10:00:00",
+          "is_green_procurement": "True",
+          "is_suspended": "False",
+          "procurement_has_parts": "False",
+          "notices_count": "2",
+          "contracts_count": "1",
+          "disputes_count": "0",
+          "procurement_start_basis": "P",
+          "created_at": "2025-09-24 05:18:37.355051",
+          "updated_at": "2025-09-24 05:18:37.355082",
+          "last_scraped": "2025-09-24 05:18:37.355086"
+        },
+        {
+          "procurement_id": "7310084",
+          "procurement_reference_nr": "279295",
+          "procurement_name": "Tammeluha matkaraja rekonstrueerimine (2)",
+          "contracting_authority_name": "Riigimetsa Majandamise Keskus",
+          "procurement_status": "19",
+          "procurement_type": "E",
+          "procurement_process_type": "A",
+          "short_description": "",
+          "is_e_procurement": "True",
+          "main_cpv_id": "5880",
+          "main_cpv_name": "Vabaajarajatiste ehitustööd",
+          "is_procurement_multi_stage": "False",
+          "proc_process_reveal_date": "2024-05-06 10:00:29.029000",
+          "proc_process_submit_date": "2024-06-03 10:00:00",
+          "is_green_procurement": "False",
+          "is_suspended": "False",
+          "procurement_has_parts": "False",
+          "notices_count": "3",
+          "contracts_count": "1",
+          "disputes_count": "0",
+          "procurement_start_basis": "P",
+          "created_at": "2025-09-24 05:18:37.524540",
+          "updated_at": "2025-09-24 05:18:37.524569",
+          "last_scraped": "2025-09-24 05:18:37.524572"
+        },
+        {
+          "procurement_id": "9308404",
+          "procurement_reference_nr": "300166",
+          "procurement_name": "Funktsionaalsed voodid",
+          "contracting_authority_name": "Sihtasutus Ida-Viru Keskhaigla",
+          "procurement_status": "11",
+          "procurement_type": "A",
+          "procurement_process_type": "A",
+          "short_description": "",
+          "is_e_procurement": "True",
+          "main_cpv_id": "5000",
+          "main_cpv_name": "Medical furniture",
+          "is_procurement_multi_stage": "False",
+          "proc_process_reveal_date": "2025-09-12 10:00:01.001000",
+          "proc_process_submit_date": "2025-09-30 12:00:00",
+          "is_green_procurement": "False",
+          "is_suspended": "False",
+          "procurement_has_parts": "False",
+          "notices_count": "1",
+          "contracts_count": "0",
+          "disputes_count": "0",
+          "procurement_start_basis": "P",
+          "created_at": "2025-09-12 11:15:50.685548",
+          "updated_at": "2025-09-18 11:34:37.510610",
+          "last_scraped": "2025-09-18 11:34:37.510639"
+        },
+        {
+          "procurement_id": "9306924",
+          "procurement_reference_nr": "300147",
+          "procurement_name": "Psühholoogilise nõustamisteenus Viljandi linna haridusasutustele",
+          "contracting_authority_name": "Viljandi Linnavalitsus",
+          "procurement_status": "11",
+          "procurement_type": "S",
+          "procurement_process_type": "VO",
+          "short_description": "",
+          "is_e_procurement": "True",
+          "main_cpv_id": "8066",
+          "main_cpv_name": "Counselling services",
+          "is_procurement_multi_stage": "False",
+          "proc_process_reveal_date": "2025-09-12 10:00:01.001000",
+          "proc_process_submit_date": "2025-09-22 12:00:00",
+          "is_green_procurement": "False",
+          "is_suspended": "False",
+          "procurement_has_parts": "False",
+          "notices_count": "1",
+          "contracts_count": "0",
+          "disputes_count": "0",
+          "procurement_start_basis": "P",
+          "created_at": "2025-09-12 11:15:50.814595",
+          "updated_at": "2025-09-18 11:34:37.713690",
+          "last_scraped": "2025-09-18 11:34:37.713720"
+        },
+        {
+          "procurement_id": "9301066",
+          "procurement_reference_nr": "300093",
+          "procurement_name": "Peremajade köökide vahetus",
+          "contracting_authority_name": "AS HOOLEKANDETEENUSED",
+          "procurement_status": "11",
+          "procurement_type": "A",
+          "procurement_process_type": "LM",
+          "short_description": "",
+          "is_e_procurement": "True",
+          "main_cpv_id": "10710",
+          "main_cpv_name": "Kitchen furniture and equipment",
+          "is_procurement_multi_stage": "False",
+          "proc_process_reveal_date": "2025-09-12 10:00:00",
+          "proc_process_submit_date": "2025-09-30 10:00:00",
+          "is_green_procurement": "True",
+          "is_suspended": "False",
+          "procurement_has_parts": "False",
+          "notices_count": "1",
+          "contracts_count": "0",
+          "disputes_count": "0",
+          "procurement_start_basis": "P",
+          "created_at": "2025-09-12 11:15:50.944751",
+          "updated_at": "2025-09-18 11:34:38.131299",
+          "last_scraped": "2025-09-18 11:34:38.131319"
+        }
+      ]
+    },
+    "matching_tasks": {
+      "columns": [
+        {
+          "name": "id",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "user_email",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "task_type",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "status",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "progress",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "current_step",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "total_steps",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "completed_steps",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "results",
+          "data_type": "json",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "error_message",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "started_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "completed_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 1,
+      "sample_data": [
+        {
+          "id": "7e986e5f-fe1f-46c0-9557-a75c7588efe4",
+          "user_email": "kamelbelkadhi2@gmail.comwed",
+          "task_type": "tender_matching",
+          "status": "running",
+          "progress": "67",
+          "current_step": "Analyzing tender 52 of 518 - 466 remaining...",
+          "total_steps": "6",
+          "completed_steps": "0",
+          "results": "{}",
+          "error_message": "",
+          "started_at": "2025-09-29 18:26:59.789080",
+          "completed_at": null,
+          "created_at": "2025-09-29 18:26:59.389761",
+          "updated_at": "2025-09-29 18:29:47.613379"
+        }
+      ]
+    },
+    "onboarding_data": {
+      "columns": [
+        {
+          "name": "user_email",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "registration_number",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "company_size",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "years_in_business",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "company_description",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "services",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "government_experience",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "certifications",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "contract_value_min",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "contract_value_max",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "notifications_email",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "notifications_sms",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "bidding_frequency",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "onboarding_completed",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "onboarding_step",
+          "data_type": "integer",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 32,
+          "scale": 0
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "business_type",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": "''::character varying",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "project_capacity",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": "''::character varying",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "work_locations",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": "''::text",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 25,
+      "sample_data": [
+        {
+          "user_email": "wefkamelbelkadhi2@gmail.com",
+          "registration_number": "12519049",
+          "company_size": "",
+          "years_in_business": "",
+          "company_description": "TEST DESCRIPTION FOR DEBUGGING",
+          "services": "",
+          "government_experience": "",
+          "certifications": "",
+          "contract_value_min": "0",
+          "contract_value_max": "1000000",
+          "notifications_email": "True",
+          "notifications_sms": "False",
+          "bidding_frequency": "weekly",
+          "onboarding_completed": "False",
+          "onboarding_step": "2",
+          "created_at": "2025-09-20 14:10:03.442614",
+          "updated_at": "2025-09-21 08:25:58.369608",
+          "business_type": "",
+          "project_capacity": "",
+          "work_locations": ""
+        },
+        {
+          "user_email": "kamelbelkawefewfwedhi2@gmail.com",
+          "registration_number": "10173188",
+          "company_size": "",
+          "years_in_business": "",
+          "company_description": "TAMRO EESTI OÜ – pharmaceutical & healthcare supply-chain specialist  \r\nSector: Pharmaceutical & medical wholesale / 3PL logistics  \r\nCore business: Full-line wholesale of Rx & OTC medicines, hospital & pharmacy supplies, plus value-added cold-chain, GDP warehousing and last-mile distribution across Estonia.  \r\nTarget market: Public & private hospitals, hospital pharmacies, community pharmacy chains, primary-care clinics, veterinary wholesalers, governmental health & emergency stock programs.  \r\nKey capabilities: GDP-licensed, temperature-controlled (2-8 °C & 15-25 °C) storage, 24 h on-call deliveries, serialisation & tamper-evident compliance, data-driven demand forecasting, reimbursement & tender management, bilingual customer service.  \r\nScale: Estonian subsidiary of Tamro Group (leading Nordic pharma distributor); 50-99 employees, nationwide coverage, >30 000 SKUs in portfolio, ISO 9001 certified.",
+          "services": "",
+          "government_experience": "extensive",
+          "certifications": "",
+          "contract_value_min": "0",
+          "contract_value_max": "1000000",
+          "notifications_email": "True",
+          "notifications_sms": "False",
+          "bidding_frequency": "weekly",
+          "onboarding_completed": "True",
+          "onboarding_step": "4",
+          "created_at": "2025-09-24 07:33:53.381103",
+          "updated_at": "2025-09-24 07:34:14.811368",
+          "business_type": "products",
+          "project_capacity": "",
+          "work_locations": ""
+        },
+        {
+          "user_email": "henrik.aavik@gmail.com",
+          "registration_number": "11038052",
+          "company_size": "",
+          "years_in_business": "",
+          "company_description": "Sevenline OÜ is an Estonia-based digital marketing holding company that orchestrates end-to-end online growth for small and mid-sized businesses across the Baltics and EU.  \r\nThrough its flagship subsidiary DreamGrow Digital (Google-certified Premier Partner), Sevenline delivers: SEO, Google Ads & PPC, conversion-focused web development, Google Analytics/GA4 set-up & deep-dive reporting, strategic digital road-mapping, domain registration and secure hosting.\r\n\r\nIndustry focus: digital marketing & martech services, e-commerce enablement, data-driven advertising.  \r\nCore customers: local SMEs, start-ups and export-oriented brands that need measurable leads, online sales and cost-efficient customer acquisition.\r\n\r\nKey capabilities: multilingual campaign management (ET/EN/RU), ROI-centric performance marketing, CRO, full-funnel analytics, 20+ years collective experience, proven track record in B2B & B2C verticals.  \r\nCompany size: micro-enterprise (<10 employees) operating on a project-based network model with scalable specialist resources.",
+          "services": "",
+          "government_experience": "Vali oma kogemuse tase",
+          "certifications": "N/A",
+          "contract_value_min": "20000",
+          "contract_value_max": "1000000",
+          "notifications_email": "True",
+          "notifications_sms": "True",
+          "bidding_frequency": "low",
+          "onboarding_completed": "True",
+          "onboarding_step": "4",
+          "created_at": "2025-09-18 08:50:26.608037",
+          "updated_at": "2025-09-24 09:14:24.812578",
+          "business_type": "Vali oma ettevõtte tüüp",
+          "project_capacity": "any",
+          "work_locations": "tallinn,estonia_other"
+        },
+        {
+          "user_email": "peep@tuut.ee",
+          "registration_number": "11038052",
+          "company_size": "",
+          "years_in_business": "",
+          "company_description": "Sevenline OÜ – Digital Marketing & Web-Services Accelerator  \r\nEstonia-based micro-enterprise (≤10 staff) focused on data-driven internet marketing, delivered mainly through its subsidiary DreamGrow Digital, Estonia’s leading Google-certified agency.  \r\nCore activities: SEO, Google Ads/AdWords management, web analytics (Google Analytics setup & deep-dives), strategic digital marketing consulting, website development, domain registration and hosting.  \r\nIndustry: Digital marketing / ICT services.  \r\nTarget market: SMEs and public-sector organisations in the Baltic-Nordic region seeking measurable online growth—more traffic, qualified leads and e-commerce sales.  \r\nKey capabilities: full-funnel performance campaigns, conversion-rate optimisation, Google stack mastery, transparent KPI reporting, 15+ years regional track record, bilingual Estonian/English service.",
+          "services": "",
+          "government_experience": "Vali oma kogemuse tase",
+          "certifications": "",
+          "contract_value_min": "0",
+          "contract_value_max": "1000000",
+          "notifications_email": "True",
+          "notifications_sms": "False",
+          "bidding_frequency": "weekly",
+          "onboarding_completed": "True",
+          "onboarding_step": "4",
+          "created_at": "2025-09-24 09:15:30.066338",
+          "updated_at": "2025-09-24 09:15:43.747486",
+          "business_type": "Vali oma ettevõtte tüüp",
+          "project_capacity": "",
+          "work_locations": ""
+        },
+        {
+          "user_email": "kaljuvee@gmail.com",
+          "registration_number": "10099962",
+          "company_size": "",
+          "years_in_business": "",
+          "company_description": "Leading construction company",
+          "services": "",
+          "government_experience": "expert",
+          "certifications": "Leading construction company with all certifications",
+          "contract_value_min": "0",
+          "contract_value_max": "1000000",
+          "notifications_email": "True",
+          "notifications_sms": "True",
+          "bidding_frequency": "low",
+          "onboarding_completed": "True",
+          "onboarding_step": "4",
+          "created_at": "2025-09-20 06:19:28.913503",
+          "updated_at": "2025-09-20 06:52:25.898627",
+          "business_type": "construction",
+          "project_capacity": "any",
+          "work_locations": "tallinn"
+        }
+      ]
+    },
+    "subscriptions": {
+      "columns": [
+        {
+          "name": "user_email",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "plan",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "status",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "start_date",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "end_date",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "billing_cycle",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "price",
+          "data_type": "double precision",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": 53,
+          "scale": null
+        },
+        {
+          "name": "currency",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 1,
+      "sample_data": [
+        {
+          "user_email": "demo@tendly.com",
+          "plan": "professional",
+          "status": "active",
+          "start_date": "2025-09-10 09:35:47.919331",
+          "end_date": null,
+          "billing_cycle": "monthly",
+          "price": "149.0",
+          "currency": "EUR",
+          "created_at": "2025-09-10 09:35:47.919334",
+          "updated_at": "2025-09-10 09:35:47.919334"
+        }
+      ]
+    },
+    "user_profiles": {
+      "columns": [
+        {
+          "name": "user_email",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "phone",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "website",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "description",
+          "data_type": "text",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "notification_email",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "notification_sms",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "language",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "timezone",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 29,
+      "sample_data": [
+        {
+          "user_email": "demo@tendly.com",
+          "phone": "",
+          "website": "",
+          "description": "",
+          "notification_email": "True",
+          "notification_sms": "False",
+          "language": "en",
+          "timezone": "UTC",
+          "updated_at": "2025-09-18 07:59:08.457067"
+        },
+        {
+          "user_email": "kaljuvee@gmail.com",
+          "phone": "",
+          "website": "",
+          "description": "",
+          "notification_email": "True",
+          "notification_sms": "False",
+          "language": "en",
+          "timezone": "UTC",
+          "updated_at": "2025-09-20 06:16:52.654513"
+        },
+        {
+          "user_email": "kamelbelkadhi2@gmail.comwed",
+          "phone": "",
+          "website": "",
+          "description": "",
+          "notification_email": "True",
+          "notification_sms": "False",
+          "language": "en",
+          "timezone": "UTC",
+          "updated_at": "2025-09-20 06:19:38.636436"
+        },
+        {
+          "user_email": "wefkamelbelkadhi2@gmail.com",
+          "phone": "",
+          "website": "",
+          "description": "",
+          "notification_email": "True",
+          "notification_sms": "False",
+          "language": "en",
+          "timezone": "UTC",
+          "updated_at": "2025-09-20 14:07:13.997506"
+        },
+        {
+          "user_email": "kaewfewmelbelkadhi2@gmail.com",
+          "phone": "",
+          "website": "",
+          "description": "",
+          "notification_email": "True",
+          "notification_sms": "False",
+          "language": "en",
+          "timezone": "UTC",
+          "updated_at": "2025-09-21 08:38:32.107493"
+        }
+      ]
+    },
+    "users": {
+      "columns": [
+        {
+          "name": "email",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "password_hash",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "name",
+          "data_type": "character varying",
+          "is_nullable": false,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "company",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "industry",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "country",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "website",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "phone",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "created_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "updated_at",
+          "data_type": "timestamp without time zone",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "is_active",
+          "data_type": "boolean",
+          "is_nullable": true,
+          "default": null,
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "auth0_sub",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": "''::character varying",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        },
+        {
+          "name": "profile_picture",
+          "data_type": "character varying",
+          "is_nullable": true,
+          "default": "''::character varying",
+          "max_length": null,
+          "precision": null,
+          "scale": null
+        }
+      ],
+      "row_count": 29,
+      "sample_data": [
+        {
+          "email": "kaljuvee@gmail.com",
+          "password_hash": "$2b$12$yo2gIYvgsHE5bMOJir2ATO2ifpWgw92h7ZPB3jyS5T5CESYSWdvle",
+          "name": "Julian Kaljuvee",
+          "company": "Nordecon AS",
+          "industry": "Unknown",
+          "country": "Estonia",
+          "website": "",
+          "phone": "",
+          "created_at": "2025-09-20 06:16:52.651826",
+          "updated_at": "2025-09-20 06:19:28.921198",
+          "is_active": "True",
+          "auth0_sub": "",
+          "profile_picture": ""
+        },
+        {
+          "email": "test@example.com",
+          "password_hash": "$2b$12$PBUC1RrztOQwHSqa6MFMl.wCvrdjUIfgK7qv.6c5BVjQ9z/vl8aAe",
+          "name": "Test User",
+          "company": "",
+          "industry": "",
+          "country": "Estonia",
+          "website": "",
+          "phone": "",
+          "created_at": "2025-09-22 15:22:26.281313",
+          "updated_at": "2025-09-22 15:22:26.670799",
+          "is_active": "True",
+          "auth0_sub": "google-oauth2|123456",
+          "profile_picture": ""
+        },
+        {
+          "email": "test2@example.com",
+          "password_hash": "$2b$12$qhgXmY69Y3jfQwrpblpF7uEs9TjToogHw6mfcN5SDWGx6S07wk4Ki",
+          "name": "Test User",
+          "company": "",
+          "industry": "",
+          "country": "Estonia",
+          "website": "",
+          "phone": "",
+          "created_at": "2025-09-22 15:23:24.508178",
+          "updated_at": "2025-09-22 15:23:24.896474",
+          "is_active": "True",
+          "auth0_sub": "google-oauth2|123456",
+          "profile_picture": "https://example.com/pic.jpg"
+        },
+        {
+          "email": "kamelbghghjkgelkadhi2@gmail.com",
+          "password_hash": "$2b$12$k5jSydEbI/xy.7hQHf9cjOHQ3/6whZ45HU29MMf1S0l3CXmT1xhMa",
+          "name": "Kamel Belkadhi",
+          "company": "Manmouna OÜ",
+          "industry": "Unknown",
+          "country": "Estonia",
+          "website": "https://nabuminds.com/",
+          "phone": "",
+          "created_at": "2025-09-23 09:10:24.604719",
+          "updated_at": "2025-09-23 09:21:20.743372",
+          "is_active": "True",
+          "auth0_sub": "",
+          "profile_picture": ""
+        },
+        {
+          "email": "kamel@landex.ai",
+          "password_hash": "$2b$12$cbVhtTDjpupd70YShoZJ2OHoG25hg4L11ha73Bw2OF/ScurtmvZFS",
+          "name": "Kamel Belkadhi",
+          "company": "",
+          "industry": "",
+          "country": "Estonia",
+          "website": "",
+          "phone": "",
+          "created_at": "2025-09-22 15:24:07.234989",
+          "updated_at": "2025-09-22 15:24:15.900212",
+          "is_active": "True",
+          "auth0_sub": "google-oauth2|106177842730121731703",
+          "profile_picture": "https://lh3.googleusercontent.com/a/ACg8ocKXnUe0fjQ0kTROVT2NLO8_6BoWhu6OTSYoHnz6-abAuGD3SoY=s96-c"
+        }
+      ]
+    }
+  },
+  "views": {
+    "pg_stat_statements": {
+      "columns": [
+        {
+          "name": "userid",
+          "data_type": "oid",
+          "is_nullable": true
+        },
+        {
+          "name": "dbid",
+          "data_type": "oid",
+          "is_nullable": true
+        },
+        {
+          "name": "toplevel",
+          "data_type": "boolean",
+          "is_nullable": true
+        },
+        {
+          "name": "queryid",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "query",
+          "data_type": "text",
+          "is_nullable": true
+        },
+        {
+          "name": "plans",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "total_plan_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "min_plan_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "max_plan_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "mean_plan_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "stddev_plan_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "calls",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "total_exec_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "min_exec_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "max_exec_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "mean_exec_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "stddev_exec_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "rows",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "shared_blks_hit",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "shared_blks_read",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "shared_blks_dirtied",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "shared_blks_written",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "local_blks_hit",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "local_blks_read",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "local_blks_dirtied",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "local_blks_written",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "temp_blks_read",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "temp_blks_written",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "shared_blk_read_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "shared_blk_write_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "local_blk_read_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "local_blk_write_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "temp_blk_read_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "temp_blk_write_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "wal_records",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "wal_fpi",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "wal_bytes",
+          "data_type": "numeric",
+          "is_nullable": true
+        },
+        {
+          "name": "jit_functions",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "jit_generation_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "jit_inlining_count",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "jit_inlining_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "jit_optimization_count",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "jit_optimization_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "jit_emission_count",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "jit_emission_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "jit_deform_count",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "jit_deform_time",
+          "data_type": "double precision",
+          "is_nullable": true
+        },
+        {
+          "name": "stats_since",
+          "data_type": "timestamp with time zone",
+          "is_nullable": true
+        },
+        {
+          "name": "minmax_stats_since",
+          "data_type": "timestamp with time zone",
+          "is_nullable": true
+        }
+      ],
+      "type": "view"
+    },
+    "pg_stat_statements_info": {
+      "columns": [
+        {
+          "name": "dealloc",
+          "data_type": "bigint",
+          "is_nullable": true
+        },
+        {
+          "name": "stats_reset",
+          "data_type": "timestamp with time zone",
+          "is_nullable": true
+        }
+      ],
+      "type": "view"
+    }
+  },
+  "indexes": {
+    "billing_history": [
+      {
+        "index_name": "billing_history_pkey",
+        "column_name": "id",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ],
+    "companies": [
+      {
+        "index_name": "companies_pkey",
+        "column_name": "registry_code",
+        "is_unique": true,
+        "is_primary": true
+      },
+      {
+        "index_name": "ix_companies_city",
+        "column_name": "city",
+        "is_unique": false,
+        "is_primary": false
+      },
+      {
+        "index_name": "ix_companies_county",
+        "column_name": "county",
+        "is_unique": false,
+        "is_primary": false
+      },
+      {
+        "index_name": "ix_companies_is_active",
+        "column_name": "is_active",
+        "is_unique": false,
+        "is_primary": false
+      },
+      {
+        "index_name": "ix_companies_legal_form",
+        "column_name": "legal_form",
+        "is_unique": false,
+        "is_primary": false
+      },
+      {
+        "index_name": "ix_companies_name",
+        "column_name": "name",
+        "is_unique": false,
+        "is_primary": false
+      },
+      {
+        "index_name": "ix_companies_registration_date",
+        "column_name": "registration_date",
+        "is_unique": false,
+        "is_primary": false
+      },
+      {
+        "index_name": "ix_companies_status",
+        "column_name": "status",
+        "is_unique": false,
+        "is_primary": false
+      },
+      {
+        "index_name": "ix_companies_vat_number",
+        "column_name": "vat_number",
+        "is_unique": false,
+        "is_primary": false
+      }
+    ],
+    "company_activities": [
+      {
+        "index_name": "company_activities_pkey",
+        "column_name": "id",
+        "is_unique": true,
+        "is_primary": true
+      },
+      {
+        "index_name": "ix_company_activities_emtak_code",
+        "column_name": "emtak_code",
+        "is_unique": false,
+        "is_primary": false
+      },
+      {
+        "index_name": "ix_company_activities_is_primary",
+        "column_name": "is_primary",
+        "is_unique": false,
+        "is_primary": false
+      },
+      {
+        "index_name": "ix_company_activities_nace_code",
+        "column_name": "nace_code",
+        "is_unique": false,
+        "is_primary": false
+      },
+      {
+        "index_name": "ix_company_activities_registry_code",
+        "column_name": "registry_code",
+        "is_unique": false,
+        "is_primary": false
+      }
+    ],
+    "contact_messages": [
+      {
+        "index_name": "contact_messages_pkey",
+        "column_name": "id",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ],
+    "estonian_tender_details": [
+      {
+        "index_name": "estonian_tender_details_pkey",
+        "column_name": "procurement_id",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ],
+    "estonian_tender_documents": [
+      {
+        "index_name": "estonian_tender_documents_pkey",
+        "column_name": "tender_id",
+        "is_unique": true,
+        "is_primary": true
+      },
+      {
+        "index_name": "estonian_tender_documents_pkey",
+        "column_name": "procurement_doc_old_id",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ],
+    "estonian_tender_results": [
+      {
+        "index_name": "estonian_tender_results_pkey",
+        "column_name": "procurement_id",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ],
+    "estonian_tenders": [
+      {
+        "index_name": "estonian_tenders_pkey",
+        "column_name": "procurement_id",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ],
+    "matching_tasks": [
+      {
+        "index_name": "matching_tasks_pkey",
+        "column_name": "id",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ],
+    "onboarding_data": [
+      {
+        "index_name": "onboarding_data_pkey",
+        "column_name": "user_email",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ],
+    "subscriptions": [
+      {
+        "index_name": "subscriptions_pkey",
+        "column_name": "user_email",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ],
+    "user_profiles": [
+      {
+        "index_name": "user_profiles_pkey",
+        "column_name": "user_email",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ],
+    "users": [
+      {
+        "index_name": "users_pkey",
+        "column_name": "email",
+        "is_unique": true,
+        "is_primary": true
+      }
+    ]
+  },
+  "constraints": {}
+}
